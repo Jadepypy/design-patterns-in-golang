@@ -1,17 +1,15 @@
 package main
 
 import (
-	"design-patterns-in-golang/singleton"
+	"design-patterns-in-golang/singleton/urgent"
 	"fmt"
 )
 
 func main() {
-	singletonInstance := singleton.GetInstance()
+	singletonInstance := urgent.GetInstance()
 	fmt.Println("is empty", singletonInstance.IsEmpty)
 	singletonInstance.Fill()
 	fmt.Println("is empty", singletonInstance.IsEmpty)
-	if singleton.GetInstance() == nil {
-		return
-	}
+
 	return
 }
