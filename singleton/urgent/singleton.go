@@ -29,7 +29,7 @@ func GetInstance() *boiler {
 //init creates a boiler instance at the start.
 //This is a simple solution to the race condition which naive(lazy) approach has overlooked.
 //If the instance is not necessarily needed, creating an instance without the hint of a caller function could lead to
-//unnecessary waste. In this case, we should consider using other approaches, ex using lock.
+//unnecessary waste. In this case, we should consider using other approaches, ex using mutex.
 func init() {
 	fmt.Println("Initialzing boiler instance...")
 	uniqueInstance = &boiler{true}
